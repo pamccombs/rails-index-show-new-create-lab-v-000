@@ -16,7 +16,7 @@ class CouponsController < ApplicationController
     @coupon = Coupon.create(
       {
         coupon[coupon_code]: params[:coupon_code],
-        store: params[:store]
+        coupon[store]: params[:store]
       }
     )
     redirect_to coupon_path(@coupon)
